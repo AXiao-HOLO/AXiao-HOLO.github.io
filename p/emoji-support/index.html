@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://AXiao-HOLO.github.io/p/emoji-support/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Emoji Support">
+<link rel="stylesheet" href="/scss/style.min.5b751aab23709d0e0e02ca1d12658499880d154c08ba2953a5faf90a00aaf553.css"><meta property='og:title' content="Emoji Support">
 <meta property='og:description' content="Guide to emoji usage in Hugo">
 <meta property='og:url' content='https://AXiao-HOLO.github.io/p/emoji-support/'>
 <meta property='og:site_name' content='AXiao_HOLO'>
@@ -213,29 +213,6 @@
         
         <li class="menu-bottom-section">
             <ol class="menu">
-                    
-                        <li id="i18n-switch">  
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
-                                
-                                    <option value="https://AXiao-HOLO.github.io/en/" >English</option>
-                                
-                                    <option value="https://AXiao-HOLO.github.io/" selected>简体中文</option>
-                                
-                            </select>
-                        </li>
-                    
-                
 
                 
                     <li id="dark-mode-toggle">
@@ -622,6 +599,89 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
+<div id="aplayer"></div>
+
+<script>	
+	const musicDir = "https://AXiao-HOLO.github.io/" + 'music/';
+	const songs = [
+		'After.Howl - Kevin Penkin',
+		'Nora - Kevin Penkin',
+		'Sign - Aimer',
+		'Theme of Holo - Kevin Penkin',
+		'アンダンテ(慢板乐章（TV动画《狼与香辛料 MERCHANT MEETS THE WISE WOLF》片尾曲）) - ClariS',
+		'りんごと君(苹果与你（TV动画《狼与香辛料》片尾曲2）) - 音莉飴',
+		'リンゴ日和～The Wolf Whistling Song - ROCKY CHACK',
+		'リンゴ日和～The Wolf Whistling Song　TVsize - ROCKY CHACK',
+		'旅のゆくえ(旅途终点 (TV动画《狼与香辛料 MERCHANT MEETS THE WISE WOLF》片头曲)) - Hana Hope',
+		'旅の途中(旅途之中) - 清浦夏実'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+	const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: true,
+	autoplay: true,
+	order: 'random',
+	lrcType: 3,
+    audio: audios
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+
+
+
+<script src=https://AXiao-HOLO.github.io/js/topbar.min.js></script>
+
+
+<script>
+    var pjax = new Pjax({
+        selectors: [".main-container"]
+    })
+    pjax._handleResponse = pjax.handleResponse;
+    pjax.handleResponse = function (responseText, request, href, options) {
+        if (request.responseText.match("<html")) {
+            
+            let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+            
+            let bodyClass = newDom.body.className;
+            document.body.setAttribute("class", bodyClass)
+            
+            setTimeout(() => {
+                pjax._handleResponse(responseText, request, href, options);
+            }, 500)
+        } else {
+            
+        }
+    }
+
+    
+    topbar.config({
+        barColors: {
+            '0': 'rgba(255, 255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
+
+    document.addEventListener('pjax:send', () => {
+        topbar.show();
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.Stack.init();
+        topbar.hide();
+    })
+</script>
     </body>
 </html>
