@@ -334,56 +334,55 @@
      
     
         
-    <div class="giscus"></div>
-<script
-    src="https://giscus.app/client.js"
-    data-repo="AXiao-HOLO/AXiao-HOLO.github.io"
-        data-repo-id="R_kgDOMui1rw"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOMui1r84CiXlK"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-<script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
-        }
-    }
-
-    (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
-        });
-        window.addEventListener("onColorSchemeChange", handler);
-
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('light');
-            } else {
-                setGiscusTheme('dark_dimmed');
-            }
-        }
-    })();
-</script>
+    <div class="giscus" id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"  
+        data-repo="AXiao-HOLO/AXiao-HOLO.github.io"  
+        data-repo-id="R_kgDOMui1rw"  
+        data-category="Announcements"  
+        data-category-id="DIC_kwDOMui1r84CiXlK"  
+        data-mapping="pathname"  
+        data-strict="0"  
+        data-reactions-enabled="1"  
+        data-emit-metadata="0"  
+        data-input-position="bottom"  
+        data-theme="preferred_color_scheme"  
+        data-lang="zh-CN"  
+        crossorigin="anonymous"  
+        async>  
+    </script>  
+    <script>  
+        function setGiscusTheme(theme) {  
+            let giscus = document.querySelector("iframe.giscus-frame");  
+            if (giscus) {  
+                giscus.contentWindow.postMessage(  
+                    {  
+                        giscus: {  
+                            setConfig: {  
+                                theme: theme,  
+                            },  
+                        },  
+                    },  
+                    "https://giscus.app"  
+                );  
+            }  
+        }  
+    
+        (function () {  
+            addEventListener("message", (e) => {  
+                if (event.origin !== "https://giscus.app") return;  
+                handler();  
+            });  
+            window.addEventListener("onColorSchemeChange", handler);  
+    
+            function handler() {  
+                if (document.documentElement.dataset.scheme === "light") {  
+                    setGiscusTheme('light');  
+                } else {  
+                    setGiscusTheme('dark_dimmed');  
+                }  
+            }  
+        })();  
+    </script>
 
     
 
@@ -546,7 +545,7 @@
 
 <script>
     var pjax = new Pjax({
-        selectors: [".main-container", "giscus"]
+        selectors: [".main-container"]
     })
     pjax._handleResponse = pjax.handleResponse;
     pjax.handleResponse = function (responseText, request, href, options) {
@@ -580,7 +579,28 @@
     document.addEventListener('pjax:complete', () => {
         window.Stack.init();
         topbar.hide();
-    })
+        
+        const giscusContainer = document.getElementById('giscus-container');  
+        if (giscusContainer) {  
+            giscusContainer.innerHTML = ''; 
+            const giscusScript = document.createElement('script');  
+            giscusScript.src = "https://giscus.app/client.js";  
+            giscusScript.setAttribute('data-repo', 'AXiao-HOLO/AXiao-HOLO.github.io');  
+            giscusScript.setAttribute('data-repo-id', 'R_kgDOMui1rw');  
+            giscusScript.setAttribute('data-category', 'Announcements');  
+            giscusScript.setAttribute('data-category-id', 'DIC_kwDOMui1r84CiXlK');  
+            giscusScript.setAttribute('data-mapping', 'pathname');  
+            giscusScript.setAttribute('data-strict', '0');  
+            giscusScript.setAttribute('data-reactions-enabled', '1');  
+            giscusScript.setAttribute('data-emit-metadata', '0');  
+            giscusScript.setAttribute('data-input-position', 'bottom');  
+            giscusScript.setAttribute('data-theme', 'preferred_color_scheme');  
+            giscusScript.setAttribute('data-lang', 'zh-CN');  
+            giscusScript.setAttribute('crossorigin', 'anonymous');  
+            giscusScript.async = true;  
+            giscusContainer.appendChild(giscusScript); 
+        }
+    });
 </script>
 
     </body>
