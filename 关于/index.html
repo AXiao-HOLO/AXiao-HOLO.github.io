@@ -6,15 +6,32 @@
 
 <link rel='canonical' href='https://AXiao-HOLO.github.io/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/scss/style.min.5b751aab23709d0e0e02ca1d12658499880d154c08ba2953a5faf90a00aaf553.css"><meta property='og:title' content="关于">
+<link rel="stylesheet" href="/scss/style.min.f5ead1202fc9f9482beac8cd83e55f78f8e039c14d9e2ef5661fd41d1c3c7b15.css"><meta property='og:title' content="关于">
 <meta property='og:description' content="This is a test page for i18n support.\n">
 <meta property='og:url' content='https://AXiao-HOLO.github.io/%E5%85%B3%E4%BA%8E/'>
 <meta property='og:site_name' content='AXiao_HOLO'>
 <meta property='og:type' content='article'><meta property='article:section' content='Page' />
 <meta name="twitter:title" content="关于">
 <meta name="twitter:description" content="This is a test page for i18n support.\n">
-    <link rel="shortcut icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico"  />
+<style>
+     
+    :root {
+        --article-font-family: "ZCOOL KuaiLe", var(--base-font-family);
+    }
+</style>
 
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
     </head>
     <body class="
     article-page
@@ -313,6 +330,30 @@
 
 
     
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
 </article>
 
     
@@ -519,7 +560,7 @@
 	fixed: true,
 	autoplay: true,
 	order: 'random',
-	volume: 0.6,
+	volume: 0.5,
 	lrcType: 3,
     audio: audios
 });
