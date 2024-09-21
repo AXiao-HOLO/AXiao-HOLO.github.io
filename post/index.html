@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://AXiao-HOLO.github.io/post/'>
 
-<link rel="stylesheet" href="/scss/style.min.f5ead1202fc9f9482beac8cd83e55f78f8e039c14d9e2ef5661fd41d1c3c7b15.css"><meta property='og:title' content="Posts">
+<link rel="stylesheet" href="/scss/style.min.ccea3d9816b4ac65d7255cb5506899ca43fe102e7bd37213fe41b86a5515bb09.css"><meta property='og:title' content="Posts">
 <meta property='og:description' content="演示说明">
 <meta property='og:url' content='https://AXiao-HOLO.github.io/post/'>
 <meta property='og:site_name' content='AXiao_HOLO'>
@@ -514,6 +514,16 @@
             giscusScript.async = true;  
             giscusContainer.appendChild(giscusScript); 
         }
+        
+        renderMathInElement(document.body, {  
+            delimiters: [  
+                { left: "$$", right: "$$", display: true },  
+                { left: "$", right: "$", display: false },  
+                { left: "\\(", right: "\\)", display: false },  
+                { left: "\\[", right: "\\]", display: true }  
+            ],  
+            ignoredClasses: ["gist"]  
+        });  
     });
 </script>
 

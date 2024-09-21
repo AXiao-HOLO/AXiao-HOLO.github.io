@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://AXiao-HOLO.github.io/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/'>
 
-<link rel="stylesheet" href="/scss/style.min.f5ead1202fc9f9482beac8cd83e55f78f8e039c14d9e2ef5661fd41d1c3c7b15.css"><meta property='og:title' content="Markdown语法学习">
+<link rel="stylesheet" href="/scss/style.min.ccea3d9816b4ac65d7255cb5506899ca43fe102e7bd37213fe41b86a5515bb09.css"><meta property='og:title' content="Markdown语法学习">
 <meta property='og:description' content="写博客的第一步(不是)基础">
 <meta property='og:url' content='https://AXiao-HOLO.github.io/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/'>
 <meta property='og:site_name' content='AXiao_HOLO'>
@@ -476,8 +476,6 @@
 	srcset="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/da59ce9a40fb44f864144dc843f5af81_hu15666149512114386824.png 480w, /p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/da59ce9a40fb44f864144dc843f5af81_hu4720753606999529040.png 1024w"
 	loading="lazy"
 	
-		alt="da59ce9a40fb44f864144dc843f5af81"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="156"
@@ -499,8 +497,6 @@
 	height="232"
 	srcset="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/0df55c66ca152d8a8c7a4738e932c951_hu2582547745903769113.png 480w, /p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/0df55c66ca152d8a8c7a4738e932c951_hu11122705959291993663.png 1024w"
 	loading="lazy"
-	
-		alt="0df55c66ca152d8a8c7a4738e932c951"
 	
 	
 		class="gallery-image" 
@@ -539,8 +535,6 @@
 	srcset="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/e546366e01191f23eb4e01a40c1cd335_hu13001508587609645026.png 480w, /p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/e546366e01191f23eb4e01a40c1cd335_hu10963726386389090312.png 1024w"
 	loading="lazy"
 	
-		alt="e546366e01191f23eb4e01a40c1cd335"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="348"
@@ -572,8 +566,6 @@
 	height="1812"
 	srcset="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/Snipaste_2024-09-15_14-04-23_hu6978081970636723553.png 480w, /p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/Snipaste_2024-09-15_14-04-23_hu4741836853373096659.png 1024w"
 	loading="lazy"
-	
-		alt="Snipaste_2024-09-15_14-04-23"
 	
 	
 		class="gallery-image" 
@@ -636,8 +628,6 @@
 	srcset="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/image-20240915141724054_hu14812335889532899330.png 480w, /p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/image-20240915141724054_hu1241231557865395641.png 1024w"
 	loading="lazy"
 	
-		alt="image-20240915141724054"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="305"
@@ -696,7 +686,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;img src=&#34;图片链接&#34; alt=&#34;图片alt&#34; title=&#34;图片title&#34;&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><img src="20150308161918_BkZrQ.thumb.1000_0.png" alt="图片alt" title="图片title">
+</div><img src="20150308161918_BkZrQ.thumb.1000_0.png" alt="" title="">
 <p>渲染的效果是一样的。</p>
 <hr>
 <p><strong>——把图片也变成超链接：</strong></p>
@@ -1380,8 +1370,6 @@
 	srcset="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/f961770f06e39d66c219cfc26f725043_hu3406748294759644689.png 480w, /p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/f961770f06e39d66c219cfc26f725043_hu12901662756670116792.png 1024w"
 	loading="lazy"
 	
-		alt="f961770f06e39d66c219cfc26f725043"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="429"
@@ -1761,6 +1749,16 @@
             giscusScript.async = true;  
             giscusContainer.appendChild(giscusScript); 
         }
+        
+        renderMathInElement(document.body, {  
+            delimiters: [  
+                { left: "$$", right: "$$", display: true },  
+                { left: "$", right: "$", display: false },  
+                { left: "\\(", right: "\\)", display: false },  
+                { left: "\\[", right: "\\]", display: true }  
+            ],  
+            ignoredClasses: ["gist"]  
+        });  
     });
 </script>
 
