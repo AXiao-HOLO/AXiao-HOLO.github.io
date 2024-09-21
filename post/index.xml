@@ -16,8 +16,8 @@
         <description>&lt;img src="https://AXiao-HOLO.github.io/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/161229155190231137135-20230610115939.png" alt="Featured image of post Markdown语法学习" /&gt;&lt;p&gt;这个页面记录我的markdown语法学习的记录，来源于&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/xdnxl/article/details/129518943?ops_request_misc=%7B%22request%5Fid%22%3A%228E959260-116A-488E-9BB5-8DBA32F0E90C%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&amp;amp;request_id=8E959260-116A-488E-9BB5-8DBA32F0E90C&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-129518943-null-null.142%5ev100%5epc_search_result_base1&amp;amp;utm_term=markdown%e8%af%ad%e6%b3%95&amp;amp;spm=1018.2226.3001.4187&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里&lt;/a&gt;。学习流程为在这篇文章中写出和目标文章相同的效果。&lt;/p&gt;
 &lt;h1 id=&#34;一markdown基本语法&#34;&gt;一、Markdown基本语法
-&lt;/h1&gt;&lt;h2 id=&#34;标题语法&#34;&gt;标题语法
-&lt;/h2&gt;&lt;h3 id=&#34;写法1&#34;&gt;写法1：
+&lt;/h1&gt;&lt;h2 id=&#34;1标题语法&#34;&gt;1.标题语法
+&lt;/h2&gt;&lt;h3 id=&#34;11写法1&#34;&gt;1.1写法1：
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -50,7 +50,7 @@
 		data-flex-basis=&#34;376px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;写法2&#34;&gt;写法2：
+&lt;h3 id=&#34;12写法2&#34;&gt;1.2写法2：
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -73,8 +73,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;字体语法&#34;&gt;字体语法：
-&lt;/h2&gt;&lt;h3 id=&#34;设计粗体斜体和删除线的方法&#34;&gt;设计粗体、斜体、和删除线的方法
+&lt;h2 id=&#34;2字体语法&#34;&gt;2.字体语法：
+&lt;/h2&gt;&lt;h3 id=&#34;21设计粗体斜体和删除线的方法&#34;&gt;2.1设计粗体、斜体、和删除线的方法
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -109,7 +109,7 @@
 		data-flex-basis=&#34;837px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;设计字体字号和颜色&#34;&gt;设计字体、字号和颜色
+&lt;h3 id=&#34;22设计字体字号和颜色&#34;&gt;2.2设计字体、字号和颜色
 &lt;/h3&gt;&lt;p&gt;这里，就需要用到HTML语法了。&lt;/p&gt;
 &lt;p&gt;因为它本身是不支持修改字体、字号与颜色等功能的。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;有些网站，比如像Github、知乎、简书等，它们就无法设置这种功能。不过像有的万盏，比如像CSDN，它的Markdown编辑器做了很好的扩展、支持HTML语法，就有这样的功能&lt;/strong&gt;&lt;/p&gt;
@@ -141,7 +141,7 @@
 		data-flex-basis=&#34;168px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;背景色&#34;&gt;背景色
+&lt;h3 id=&#34;23背景色&#34;&gt;2.3背景色
 &lt;/h3&gt;&lt;p&gt;在markdown语法里，本身也是没有背景色这样一个选项的。&lt;/p&gt;
 &lt;p&gt;所以，就需要用内置HTML的形式。&lt;/p&gt;
 &lt;p&gt;借助 table, tr, td 等表格标签的 bgcolor 属性来实现背景色的功能。举例如下：&lt;/p&gt;
@@ -156,8 +156,8 @@
 &lt;/div&gt;&lt;p&gt;渲染效果：&lt;/p&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td bgcolor=orange&gt;背景色是：orange&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1&#34;&gt;链接语法
-&lt;/h2&gt;&lt;h3 id=&#34;markdown语法形式&#34;&gt;Markdown语法形式
+&lt;h2 id=&#34;1&#34;&gt;3.链接语法
+&lt;/h2&gt;&lt;h3 id=&#34;31markdown语法形式&#34;&gt;3.1Markdown语法形式
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -202,7 +202,7 @@
 		data-flex-basis=&#34;732px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;html形式语法&#34;&gt;HTML形式语法
+&lt;h3 id=&#34;32html形式语法&#34;&gt;3.2HTML形式语法
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -213,7 +213,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;a href=&#34;baidu.com&#34; title=&#34;搜索网站&#34;&gt;百度一下，你就知道&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;出来的效果和上面的是一样的。&lt;/p&gt;
-&lt;h3 id=&#34;图片链接&#34;&gt;图片链接
+&lt;h3 id=&#34;33图片链接&#34;&gt;3.3图片链接
 &lt;/h3&gt;&lt;p&gt;——markdown语法：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -286,7 +286,7 @@
 &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;当然，关于图片的操作还有很多，但其他的大多都不太常用了，我们这里就不再介绍。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;自动生成超链接&#34;&gt;自动生成超链接
+&lt;h3 id=&#34;34自动生成超链接&#34;&gt;3.4自动生成超链接
 &lt;/h3&gt;&lt;p&gt;有一种比较简单的方法，就是直接在链接的两侧加上一个尖括号，这样markdown会自动将其识别为一个链接。&lt;/p&gt;
 &lt;p&gt;具体来说，就是：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -302,7 +302,7 @@
 &lt;p&gt;这个样子的话，对于网址和Email，也可以比较方便地转换为可点击的链接了。读者可自行尝试，直接用尖括号加上邮箱即可。&lt;/p&gt;
 &lt;p&gt;如果想要对链接进行渲染，直接在链接上进行其他的渲染操作即可(比如加粗、变换字体、字号等)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;锚点&#34;&gt;锚点
+&lt;h3 id=&#34;35锚点&#34;&gt;3.5锚点
 &lt;/h3&gt;&lt;p&gt;这是一个很6的语法。&lt;/p&gt;
 &lt;p&gt;锚点实际上就是页内连接。&lt;/p&gt;
 &lt;p&gt;具体语法是：&lt;/p&gt;
@@ -337,7 +337,7 @@
 	
 &gt;:&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;注脚&#34;&gt;注脚
+&lt;h3 id=&#34;36注脚&#34;&gt;3.6注脚
 &lt;/h3&gt;&lt;p&gt;语法示例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -354,18 +354,18 @@
 &lt;/div&gt;&lt;p&gt;渲染效果：（注：脚注可能自动被搬运到最后面，请到文章末尾查看）&lt;/p&gt;
 &lt;p&gt;xxxx&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;xxxx&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;内容目录&#34;&gt;内容目录
+&lt;h3 id=&#34;37内容目录&#34;&gt;3.7内容目录
 &lt;/h3&gt;&lt;p&gt;在段落中填写 [TOC] 以显示全文内容的目录结构。&lt;/p&gt;
 &lt;p&gt;不过还是需要注意，不是所有的编辑器都支持。比如我记得知乎就不支持（不知道现在支不支持了）。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;分割线语法&#34;&gt;分割线语法
+&lt;h2 id=&#34;4分割线语法&#34;&gt;4.分割线语法
 &lt;/h2&gt;&lt;p&gt;这个比较简单，如果要创建分隔线，在单独一行上使用三个或多个星号 (&lt;code&gt;***&lt;/code&gt;)、破折号 (&lt;code&gt;---&lt;/code&gt;) 或下划线 (&lt;code&gt;___&lt;/code&gt;) ，并且不能包含其他内容。&lt;/p&gt;
 &lt;p&gt;效果展示：&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;代码语法&#34;&gt;代码语法
+&lt;h2 id=&#34;5代码语法&#34;&gt;5.代码语法
 &lt;/h2&gt;&lt;p&gt;对于程序员来说，代码是必不可少的。&lt;/p&gt;
 &lt;p&gt;插入程序代码的方式主要是利用英文“`”符号（一般在ESC键下方，和~同一个键）包裹代码。&lt;/p&gt;
-&lt;h3 id=&#34;包裹转义代码&#34;&gt;包裹转义代码
+&lt;h3 id=&#34;51包裹转义代码&#34;&gt;5.1包裹转义代码
 &lt;/h3&gt;&lt;p&gt;如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(````)中.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -381,7 +381,7 @@
 &lt;p&gt;&lt;code&gt;printf(&amp;quot;hello world&amp;quot;);&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;printf(&amp;ldquo;hello world&amp;rdquo;);&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;代码块&#34;&gt;代码块
+&lt;h3 id=&#34;52代码块&#34;&gt;5.2代码块
 &lt;/h3&gt;&lt;p&gt;我们刚刚是在所要包裹的代码两侧各加上两个`` `&lt;/p&gt;
 &lt;p&gt;那么现在，我直接用三个&lt;code&gt;```&lt;/code&gt;来作为开始就好了。&lt;/p&gt;
 &lt;p&gt;它的示例效果就是像这样：&lt;/p&gt;
@@ -392,7 +392,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h3 id=&#34;html代码块&#34;&gt;HTML代码块
+&lt;h3 id=&#34;53html代码块&#34;&gt;5.3HTML代码块
 &lt;/h3&gt;&lt;p&gt;当然了，也可以用HTML代码块来去写。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -417,8 +417,8 @@
   &lt;/html&gt;
 &lt;p&gt;当然，需要注意的是有些编辑器是不支持HTML语法的。比如简书等。我们在前面提到过。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;引用&#34;&gt;引用
-&lt;/h2&gt;&lt;h3 id=&#34;基本使用方法&#34;&gt;基本使用方法
+&lt;h2 id=&#34;6引用&#34;&gt;6.引用
+&lt;/h2&gt;&lt;h3 id=&#34;61基本使用方法&#34;&gt;6.1基本使用方法
 &lt;/h3&gt;&lt;p&gt;在所要加引用的段落前面加上一个&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;比如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -433,7 +433,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;这是一个引用&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;引用嵌套&#34;&gt;引用嵌套
+&lt;h3 id=&#34;62引用嵌套&#34;&gt;6.2引用嵌套
 &lt;/h3&gt;&lt;p&gt;就是在引用里面再加一层引用。&lt;/p&gt;
 &lt;p&gt;语法也很简单：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -455,7 +455,7 @@
 &lt;p&gt;这是一个嵌套引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;带有其他元素的块引用&#34;&gt;带有其他元素的块引用
+&lt;h3 id=&#34;63带有其他元素的块引用&#34;&gt;6.3带有其他元素的块引用
 &lt;/h3&gt;&lt;p&gt;比如，在引用里包含表题 、不同形式的字体等等。类似于不同语法的嵌套使用。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -473,8 +473,8 @@
 这是一个普通的引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;列表&#34;&gt;列表
-&lt;/h2&gt;&lt;h3 id=&#34;无序列表&#34;&gt;无序列表
+&lt;h2 id=&#34;7列表&#34;&gt;7.列表
+&lt;/h2&gt;&lt;h3 id=&#34;71无序列表&#34;&gt;7.1无序列表
 &lt;/h3&gt;&lt;p&gt;使用*，+，-表示无序列表。&lt;/p&gt;
 &lt;p&gt;注意：符号后面一定要有一个空格，起到缩进的作用。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -509,7 +509,7 @@
 &lt;li&gt;我是无序列表6&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;有序列表&#34;&gt;有序列表
+&lt;h3 id=&#34;72有序列表&#34;&gt;7.2有序列表
 &lt;/h3&gt;&lt;p&gt;使用数字和一个英文句点表示有序列表。&lt;/p&gt;
 &lt;p&gt;注意：英文句点后面一定要有一个空格，起到缩进的作用。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -533,7 +533,7 @@
 &lt;p&gt;另外，列表不光可以单独使用，也可以使用其他的 Markdown 语法，包括标题、引用、代码区块等。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;【注】在使用列表时，只要是数字后面加上英文的点，就会无意间产生列表，比如2017.12.30 这时候想表达的是日期，有些软件把它被误认为是列表。解决方式：在每个点前面加上\就可以了。&lt;/p&gt;
-&lt;h2 id=&#34;表格&#34;&gt;表格
+&lt;h2 id=&#34;8表格&#34;&gt;8.表格
 &lt;/h2&gt;&lt;p&gt;语法格式：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -573,11 +573,11 @@
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;二其他常用&#34;&gt;二、其他常用
-&lt;/h1&gt;&lt;h2 id=&#34;换行&#34;&gt;换行
+&lt;/h1&gt;&lt;h2 id=&#34;9换行&#34;&gt;9.换行
 &lt;/h2&gt;&lt;p&gt;方法1：连续两个以上空格+回车。&lt;/p&gt;
 &lt;p&gt;方法2：使用html语言换行标签。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;特殊符号&#34;&gt;特殊符号
+&lt;h2 id=&#34;10特殊符号&#34;&gt;10.特殊符号
 &lt;/h2&gt;&lt;p&gt;(1)对于Markdown中的语法符号，前面加反斜线\即可显示符号本身。这和高级程序设计语言中的转义用法类似。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -620,8 +620,8 @@
 &lt;p&gt;不过还是需要注意，不是所有的在线编辑器都支持这样的转换方式。但大多数都支持。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;三高级用法&#34;&gt;三、高级用法
-&lt;/h1&gt;&lt;h2 id=&#34;latex数学公式&#34;&gt;Latex数学公式
-&lt;/h2&gt;&lt;h3 id=&#34;行内公式&#34;&gt;行内公式：
+&lt;/h1&gt;&lt;h2 id=&#34;11latex数学公式&#34;&gt;11.Latex数学公式
+&lt;/h2&gt;&lt;h3 id=&#34;111行内公式&#34;&gt;11.1行内公式：
 &lt;/h3&gt;&lt;p&gt;使用两个“$”符号引用公式：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -641,8 +641,8 @@
 &lt;p&gt;$n*2$&lt;/p&gt;
 &lt;p&gt;**我们可以在$$里写上相应的数学公式。**具体见3.1.2&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;具体数学公式&#34;&gt;具体数学公式
-&lt;/h3&gt;&lt;h4 id=&#34;指数与下标&#34;&gt;指数与下标
+&lt;h3 id=&#34;112具体数学公式&#34;&gt;11.2具体数学公式
+&lt;/h3&gt;&lt;h4 id=&#34;1121指数与下标&#34;&gt;11.2.1指数与下标
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -655,7 +655,7 @@
 &lt;p&gt;$a^3_{2}$&lt;/p&gt;
 &lt;p&gt;这个&lt;code&gt;^&lt;/code&gt;后面，就是跟着一个指数，然后&lt;code&gt;_&lt;/code&gt;的后面跟着的就是下标&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;平方根&#34;&gt;平方根
+&lt;h4 id=&#34;1122平方根&#34;&gt;11.2.2平方根
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -667,7 +667,7 @@
 &lt;/div&gt;&lt;p&gt;渲染效果：&lt;/p&gt;
 &lt;p&gt;$\sqrt{x}$&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;在上方或者下方的下划线可以表示取反等&#34;&gt;在上方或者下方的下划线(可以表示取反等)
+&lt;h4 id=&#34;1123在上方或者下方的下划线可以表示取反等&#34;&gt;11.2.3在上方或者下方的下划线(可以表示取反等)
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -682,7 +682,7 @@
 &lt;p&gt;$\overline{m+n}$&lt;/p&gt;
 &lt;p&gt;$\underline{m+n}$&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;向量&#34;&gt;向量
+&lt;h4 id=&#34;1124向量&#34;&gt;11.2.4向量
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -700,7 +700,7 @@
 &lt;p&gt;$\overrightarrow{AB}$&lt;/p&gt;
 &lt;p&gt;$\overleftarrow{AB}$&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;分数&#34;&gt;分数
+&lt;h4 id=&#34;1125分数&#34;&gt;11.2.5分数
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -721,7 +721,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;积分求和求积运算符&#34;&gt;积分、求和、求积运算符
+&lt;h4 id=&#34;1126积分求和求积运算符&#34;&gt;11.2.6积分、求和、求积运算符
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -739,7 +739,7 @@
 &lt;p&gt;$\int_{0}^{\pi}$&lt;/p&gt;
 &lt;p&gt;$\prod_{0}^{n}$&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;其他一些希腊字母的表示&#34;&gt;其他一些希腊字母的表示
+&lt;h4 id=&#34;1127其他一些希腊字母的表示&#34;&gt;11.2.7其他一些希腊字母的表示
 &lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -922,7 +922,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;流程图&#34;&gt;流程图
+&lt;h2 id=&#34;12流程图&#34;&gt;12.流程图
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
