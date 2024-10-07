@@ -6,6 +6,31 @@
         <description>Recent content in Tags on AXiao_HOLO</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>AXiao_HOLO</copyright><atom:link href="https://AXiao-HOLO.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>AXiao_HOLO</copyright>
+        <lastBuildDate>Mon, 07 Oct 2024 14:37:10 +0800</lastBuildDate><atom:link href="https://AXiao-HOLO.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Axiao</title>
+        <link>https://AXiao-HOLO.github.io/tags/axiao/</link>
+        <pubDate>Mon, 07 Oct 2024 14:37:10 +0800</pubDate>
+        
+        <guid>https://AXiao-HOLO.github.io/tags/axiao/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java</title>
+        <link>https://AXiao-HOLO.github.io/tags/java/</link>
+        <pubDate>Mon, 07 Oct 2024 14:37:10 +0800</pubDate>
+        
+        <guid>https://AXiao-HOLO.github.io/tags/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Markdown</title>
+        <link>https://AXiao-HOLO.github.io/tags/markdown/</link>
+        <pubDate>Sun, 15 Sep 2024 16:05:56 +0800</pubDate>
+        
+        <guid>https://AXiao-HOLO.github.io/tags/markdown/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
