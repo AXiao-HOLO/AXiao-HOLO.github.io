@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="java学习笔记，来自itheima.com">
+<title>day04-判断和循环</title>
+
+<link rel='canonical' href='https://AXiao-HOLO.github.io/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/'>
+
+<link rel="stylesheet" href="/scss/style.min.ccea3d9816b4ac65d7255cb5506899ca43fe102e7bd37213fe41b86a5515bb09.css"><meta property='og:title' content="day04-判断和循环">
+<meta property='og:description' content="java学习笔记，来自itheima.com">
+<meta property='og:url' content='https://AXiao-HOLO.github.io/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/'>
+<meta property='og:site_name' content='AXiao_HOLO'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='java' /><meta property='article:tag' content='axiao' /><meta property='article:published_time' content='2024-10-09T12:00:00&#43;08:00'/><meta property='article:modified_time' content='2024-10-09T12:00:00&#43;08:00'/><meta property='og:image' content='https://AXiao-HOLO.github.io/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/Image_1724940523674.jpg' />
+<meta name="twitter:title" content="day04-判断和循环">
+<meta name="twitter:description" content="java学习笔记，来自itheima.com"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://AXiao-HOLO.github.io/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/Image_1724940523674.jpg' />
+<link rel="shortcut icon" href="/favicon.ico"  />
+<style>
+     
+    :root {
+        --article-font-family: "ZCOOL KuaiLe", var(--base-font-family);
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16316423975590654315.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">❣️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">AXiao_HOLO</a></h1>
+            <h2 class="site-description">这是阿逍的个人网站</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/407459315'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/AXiao-HOLO'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#第一章-流程控制语句">第一章 流程控制语句</a>
+      <ol>
+        <li><a href="#11-流程控制语句分类">1.1 流程控制语句分类</a></li>
+        <li><a href="#12-顺序结构">1.2 顺序结构</a></li>
+      </ol>
+    </li>
+    <li><a href="#第二章-判断语句if语句">第二章 判断语句：if语句</a>
+      <ol>
+        <li><a href="#21-if语句格式1">2.1 if语句格式1</a>
+          <ol>
+            <li><a href="#练习1老丈人选女婿">练习1：老丈人选女婿</a></li>
+            <li><a href="#练习2考试奖励">练习2：考试奖励</a></li>
+            <li><a href="#第一种格式的细节">第一种格式的细节：</a></li>
+          </ol>
+        </li>
+        <li><a href="#22-if语句格式2">2.2 if语句格式2</a>
+          <ol>
+            <li><a href="#练习1吃饭">练习1：吃饭</a></li>
+            <li><a href="#练习2影院选座">练习2：影院选座</a></li>
+          </ol>
+        </li>
+        <li><a href="#23-if语句格式3">2.3 if语句格式3</a>
+          <ol>
+            <li><a href="#练习1考试奖励">练习1：考试奖励</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#第三章-switch语句">第三章 switch语句</a>
+      <ol>
+        <li><a href="#31-格式">3.1 格式</a></li>
+        <li><a href="#32-执行流程">3.2 <strong>执行流程：</strong></a>
+          <ol>
+            <li><a href="#练习运动计划">练习：运动计划</a></li>
+          </ol>
+        </li>
+        <li><a href="#33-switch的扩展知识">3.3 switch的扩展知识：</a>
+          <ol>
+            <li><a href="#练习休息日和工作日">练习：休息日和工作日</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#第四章-循环结构">第四章 循环结构</a>
+      <ol>
+        <li><a href="#41-for循环结构掌握">4.1 for循环结构（掌握）</a>
+          <ol>
+            <li><a href="#411-for循环格式">4.1.1 for循环格式：</a></li>
+          </ol>
+        </li>
+        <li><a href="#42-while循环">4.2 while循环</a>
+          <ol>
+            <li><a href="#421-格式">4.2.1 格式：</a></li>
+          </ol>
+        </li>
+        <li><a href="#43-dowhile循环">4.3 do&hellip;while循环</a></li>
+        <li><a href="#44-三种格式的区别">4.4 三种格式的区别：</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/">
+                <img src="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/Image_1724940523674_hu1702456152745079029.jpg"
+                        srcset="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/Image_1724940523674_hu1702456152745079029.jpg 800w, /p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/Image_1724940523674_hu6428976472559854411.jpg 1600w"
+                        width="800" 
+                        height="411" 
+                        loading="lazy"
+                        alt="Featured image of post day04-判断和循环" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%AD%A6%E4%B9%A0/" >
+                学习
+            </a>
+        
+            <a href="/categories/java/" >
+                Java
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/">day04-判断和循环</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            java学习笔记，来自itheima.com
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 09, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 13 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="第一章-流程控制语句">第一章 流程控制语句
+</h2><p>在一个程序执行的过程中，各条语句的执行顺序对程序的结果是有直接影响的。所以，我们必须清楚每条语句的执行流程。而且，很多时候要通过控制语句的执行顺序来实现我们想要的功能。</p>
+<h3 id="11-流程控制语句分类">1.1 流程控制语句分类
+</h3><p>​	顺序结构</p>
+<p>​	判断和选择结构(if, switch)</p>
+<p>​	循环结构(for, while, do…while)</p>
+<h3 id="12-顺序结构">1.2 顺序结构
+</h3><p>顺序结构是程序中最简单最基本的流程控制，没有特定的语法结构，按照代码的先后顺序，依次执行，程序中大多数的代码都是这样执行的。</p>
+<p>顺序结构执行流程图：</p>
+<p><img src="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545615769372.png"
+	width="105"
+	height="245"
+	srcset="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545615769372_hu3083383982059994019.png 480w, /p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545615769372_hu2656499459121179510.png 1024w"
+	loading="lazy"
+	
+		alt="1545615769372"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="42"
+		data-flex-basis="102px"
+	
+></p>
+<h2 id="第二章-判断语句if语句">第二章 判断语句：if语句
+</h2><h3 id="21-if语句格式1">2.1 if语句格式1
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">格式</span><span class="err">：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">关系表达式</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体</span><span class="p">;</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>执行流程：</p>
+<p>①首先计算关系表达式的值</p>
+<p>②如果关系表达式的值为true就执行语句体</p>
+<p>③如果关系表达式的值为false就不执行语句体</p>
+<p>④继续执行后面的语句内容</p>
+<p><img src="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616039363.png"
+	width="180"
+	height="213"
+	srcset="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616039363_hu10750299960640403284.png 480w, /p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616039363_hu2454871397635614312.png 1024w"
+	loading="lazy"
+	
+		alt="1545616039363"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="84"
+		data-flex-basis="202px"
+	
+></p>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfDemo</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;开始&#34;</span><span class="p">);</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//定义两个变量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">20</span><span class="p">;</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//需求：判断a和b的值是否相等，如果相等，就在控制台输出：a等于b</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;a等于b&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">		
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//需求：判断a和c的值是否相等，如果相等，就在控制台输出：a等于c</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;a等于c&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">		
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;结束&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="练习1老丈人选女婿">练习1：老丈人选女婿
+</h4><p>需求：</p>
+<p>​	键盘录入女婿的酒量，如果大于2斤，老丈人给出回应，否则没有任何回应</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//分析：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//1.键盘录入女婿的酒量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入女婿的酒量&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">wine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="c1">//5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.对酒量进行一个判断即可</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="p">(</span><span class="n">wine</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;不错哟，小伙子！&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="练习2考试奖励">练习2：考试奖励
+</h4><p>需求：</p>
+<p>​	键盘录入一个整数，表示小明的考试名次，如果名次为1，小红可以当小明的女朋有了。</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//分析：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//1.键盘录入一个整数，表示小明的考试名次</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入小明的名次&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">rank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.对小明的考试成绩进行判断即可</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="p">(</span><span class="n">rank</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;小红成为了小明的女朋友&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="第一种格式的细节">第一种格式的细节：
+</h4><ol>
+<li>
+<p>如果我们要对一个布尔类型的变量进行判断，不要写==，直接把变量写在小括号中即可。</p>
+</li>
+<li>
+<p>如果大括号中的语句体只有一条，那么大括号可以省略不写</p>
+<p>如果大括号省略了，那么if只能控制距离他最近的那一条语句。</p>
+<p>**建议：**自己不要去写，如果别人这么写了，你要能看懂即可。</p>
+</li>
+</ol>
+<h3 id="22-if语句格式2">2.2 if语句格式2
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">格式</span><span class="err">：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">关系表达式</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体1</span><span class="p">;</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体2</span><span class="p">;</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>执行流程：</p>
+<p>①首先计算关系表达式的值</p>
+<p>②如果关系表达式的值为true就执行语句体1</p>
+<p>③如果关系表达式的值为false就执行语句体2</p>
+<p>④继续执行后面的语句内容</p>
+<p><img src="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616221283.png"
+	width="257"
+	height="221"
+	srcset="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616221283_hu9276596215913423870.png 480w, /p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616221283_hu12547108631050593927.png 1024w"
+	loading="lazy"
+	
+		alt="1545616221283"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="116"
+		data-flex-basis="279px"
+	
+></p>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IfDemo02</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;开始&#34;</span><span class="p">);</span><span class="w">		
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//定义两个变量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">20</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//需求：判断a是否大于b，如果是，在控制台输出：a的值大于b，否则，在控制台输出：a的值不大于b</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;a的值大于b&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;a的值不大于b&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">		
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;结束&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="练习1吃饭">练习1：吃饭
+</h4><p>需求：</p>
+<p>​	    键盘录入一个整数，表示身上的钱。</p>
+<p>​            如果大于等于100块，就是网红餐厅。</p>
+<p>​            否则，就吃经济实惠的沙县小吃。</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//分析：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//1.键盘录入一个整数。表示身上的钱。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入一个整数表示身上的钱&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.对钱进行判断</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="p">(</span><span class="n">money</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">100</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;吃网红餐厅&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;福建大酒店&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="练习2影院选座">练习2：影院选座
+</h4><p>需求：</p>
+<p>​	在实际开发中，电影院选座也会使用到if判断。</p>
+<p>​	假设某影院售卖了100张票，票的序号为1~100。</p>
+<p>​	其中奇数票号坐左侧，偶数票号坐右侧。</p>
+<p>​	键盘录入一个整数表示电影票的票号。</p>
+<p>​	根据不同情况，给出不同的提示：</p>
+<p>​		如果票号为奇数，那么打印坐左边。</p>
+<p>​		如果票号为偶数，那么打印坐右边。</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//分析：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//1.键盘录入票号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入票号&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">ticket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="p">(</span><span class="n">ticket</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ticket</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">100</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//合法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//2.对票号进行判断</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ticket</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//偶数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;坐右边&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//奇数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;坐左边&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//票号不合法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;票号不合法&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="23-if语句格式3">2.3 if语句格式3
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">格式</span><span class="err">：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">关系表达式1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体1</span><span class="p">;</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">关系表达式2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体2</span><span class="p">;</span><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">…</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体n</span><span class="o">+</span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>执行流程：</p>
+<p>①首先计算关系表达式1的值</p>
+<p>②如果值为true就执行语句体1；如果值为false就计算关系表达式2的值</p>
+<p>③如果值为true就执行语句体2；如果值为false就计算关系表达式3的值</p>
+<p>④…</p>
+<p>⑤如果没有任何关系表达式为true，就执行语句体n+1。</p>
+<p><img src="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616667104.png"
+	width="564"
+	height="342"
+	srcset="/p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616667104_hu4390648812243848824.png 480w, /p/day04-%E5%88%A4%E6%96%AD%E5%92%8C%E5%BE%AA%E7%8E%AF/1545616667104_hu9122918215462057653.png 1024w"
+	loading="lazy"
+	
+		alt="1545616667104"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="395px"
+	
+></p>
+<h4 id="练习1考试奖励">练习1：考试奖励
+</h4><p>需求：</p>
+<p>​	小明快要期末考试了，小明爸爸对他说，会根据他不同的考试成绩，送他不同的礼物，</p>
+<p>假如你可以控制小明的得分，请用程序实现小明到底该获得什么样的礼物，并在控制台输出。</p>
+<p>分析：</p>
+<p>​	①小明的考试成绩未知，可以使用键盘录入的方式获取值</p>
+<p>​	②由于奖励种类较多，属于多种判断，采用if&hellip;else&hellip;if格式实现</p>
+<p>​	③为每种判断设置对应的条件</p>
+<p>​	④为每种判断设置对应的奖励</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//95~100 自行车一辆</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//90~94   游乐场玩一天</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//80 ~ 89 变形金刚一个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//80 以下  胖揍一顿</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//1.键盘录入一个值表示小明的分数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入小明的成绩&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.对分数的有效性进行判断</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">100</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//有效的分数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//3.对小明的分数进行判断，不同情况执行不同的代码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">95</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">100</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;送自行车一辆&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">90</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">94</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;游乐场玩一天&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">80</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">89</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;变形金刚一个&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;胖揍一顿&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//无效的分数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;分数不合法&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="第三章-switch语句">第三章 switch语句
+</h2><h3 id="31-格式">3.1 格式
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">表达式</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">case</span><span class="w"> </span><span class="n">1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">语句体1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">case</span><span class="w"> </span><span class="n">2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">语句体2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">default</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">语句体n</span><span class="o">+</span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="32-执行流程">3.2 <strong>执行流程：</strong>
+</h3><ul>
+<li>首先计算出表达式的值</li>
+<li>其次，和case依次比较，一旦有对应的值，就会执行相应的语句，在执行的过程中，遇到break就会结 束。</li>
+<li>最后，如果所有的case都和表达式的值不匹配，就会执行default语句体部分，然后程序结束掉。</li>
+</ul>
+<h4 id="练习运动计划">练习：运动计划
+</h4><ul>
+<li>
+<p>需求：键盘录入星期数，显示今天的减肥活动。</p>
+<p>周一：跑步</p>
+<p>周二：游泳</p>
+<p>周三：慢走</p>
+<p>周四：动感单车</p>
+<p>周五：拳击</p>
+<p>周六：爬山</p>
+<p>周日：好好吃一顿</p>
+</li>
+<li>
+<p>代码示例：</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">a01switch选择语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SwitchDemo2</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//1.键盘录入一个整数表示星期</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入一个整数表示星期&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">week</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//2.书写一个switch语句去跟week进行匹配</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">week</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;跑步&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;游泳&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">3</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;慢走&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">4</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;动感单车&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">5</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;拳击&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">6</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;爬山&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">7</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;好好吃一顿&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">default</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;输入错误，没有这个星期&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="33-switch的扩展知识">3.3 switch的扩展知识：
+</h3><ul>
+<li>
+<p>default的位置和省略情况</p>
+<p>default可以放在任意位置，也可以省略</p>
+</li>
+<li>
+<p>case穿透</p>
+<p>不写break会引发case穿透现象</p>
+</li>
+<li>
+<p>switch在JDK12的新特性</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;一&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;二&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;三&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;其他&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>switch和if第三种格式各自的使用场景</li>
+</ul>
+<p>当我们需要对一个范围进行判断的时候，用if的第三种格式</p>
+<p>当我们把有限个数据列举出来，选择其中一个执行的时候，用switch语句</p>
+<p>比如：</p>
+<p>​	小明的考试成绩，如果用switch，那么需要写100个case，太麻烦了，所以用if简单。</p>
+<p>​	如果是星期，月份，客服电话中0~9的功能选择就可以用switch</p>
+<h4 id="练习休息日和工作日">练习：休息日和工作日
+</h4><p>需求：键盘录入星期数，输出工作日、休息日。</p>
+<p>(1-5) 工作日，(6-7)休息日。</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//分析：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//1.键盘录入星期数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入星期&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">week</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="c1">//3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.利用switch进行匹配</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">----------------------------------------------------</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">利用case穿透简化代码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nf">switch</span><span class="w"> </span><span class="p">(</span><span class="n">week</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">3</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">4</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">5</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;工作日&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">6</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">7</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;休息日&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;没有这个星期&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">----------------------------------------------------</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">利用JDK12简化代码书写</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nf">switch</span><span class="w"> </span><span class="p">(</span><span class="n">week</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">4</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;工作日&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">6</span><span class="p">,</span><span class="w"> </span><span class="n">7</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;休息日&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;没有这个星期&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="第四章-循环结构">第四章 循环结构
+</h2><h3 id="41-for循环结构掌握">4.1 for循环结构（掌握）
+</h3><p>​	循环语句可以在满足循环条件的情况下，反复执行某一段代码，这段被重复执行的代码被称为循环体语句，当反复 执行这个循环体时，需要在合适的时候把循环判断条件修改为false，从而结束循环，否则循环将一直执行下去，形 成死循环。</p>
+<h4 id="411-for循环格式">4.1.1 for循环格式：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">初始化语句</span><span class="p">;</span><span class="n">条件判断语句</span><span class="p">;</span><span class="n">条件控制语句</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">循环体语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>格式解释：</strong></p>
+<ul>
+<li>初始化语句：  用于表示循环开启时的起始状态，简单说就是循环开始的时候什么样</li>
+<li>条件判断语句：用于表示循环反复执行的条件，简单说就是判断循环是否能一直执行下去</li>
+<li>循环体语句：  用于表示循环反复执行的内容，简单说就是循环反复执行的事情</li>
+<li>条件控制语句：用于表示循环执行中每次变化的内容，简单说就是控制循环是否能执行下去</li>
+</ul>
+<p><strong>执行流程：</strong></p>
+<p>①执行初始化语句</p>
+<p>②执行条件判断语句，看其结果是true还是false</p>
+<p>​             如果是false，循环结束</p>
+<p>​             如果是true，继续执行</p>
+<p>③执行循环体语句</p>
+<p>④执行条件控制语句</p>
+<p>⑤回到②继续</p>
+<p><strong>for循环书写技巧：</strong></p>
+<ul>
+<li>确定循环的开始条件</li>
+<li>确定循环的结束条件</li>
+<li>确定循环要重复执行的代码</li>
+</ul>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//1.确定循环的开始条件</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.确定循环的结束条件</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//3.确定要重复执行的代码</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//需求：打印5次HelloWorld</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//开始条件：1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//结束条件：5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//重复代码：打印语句</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;HelloWorld&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="for循环练习-输出数据">for循环练习-输出数据
+</h5><ul>
+<li>需求：在控制台输出1-5和5-1的数据</li>
+<li>示例代码：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ForTest01</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//需求：输出数据1-5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;--------&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//需求：输出数据5-1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;=</span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="for循环练习-求和">for循环练习-求和
+</h5><ul>
+<li>需求：求1-5之间的数据和，并把求和结果在控制台输出</li>
+<li>示例代码：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ForTest02</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//求和的最终结果必须保存起来，需要定义一个变量，用于保存求和的结果，初始值为0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//从1开始到5结束的数据，使用循环结构完成</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="c1">//将反复进行的事情写入循环结构内部</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">             </span><span class="c1">// 此处反复进行的事情是将数据 i 加到用于保存最终求和的变量 sum 中</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">				sum += i;	sum = sum + i;
+</span></span></span><span class="line"><span class="cl"><span class="cm">				第一次：sum = sum + i = 0 + 1 = 1;
+</span></span></span><span class="line"><span class="cl"><span class="cm">				第二次：sum = sum + i = 1 + 2 = 3;
+</span></span></span><span class="line"><span class="cl"><span class="cm">				第三次：sum = sum + i = 3 + 3 = 6;
+</span></span></span><span class="line"><span class="cl"><span class="cm">				第四次：sum = sum + i = 6 + 4 = 10;
+</span></span></span><span class="line"><span class="cl"><span class="cm">				第五次：sum = sum + i = 10 + 5 = 15;
+</span></span></span><span class="line"><span class="cl"><span class="cm">			*/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//当循环执行完毕时，将最终数据打印出来</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;1-5之间的数据和是：&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>本题要点：
+<ul>
+<li>今后遇到的需求中，如果带有求和二字，请立即联想到求和变量</li>
+<li>求和变量的定义位置，必须在循环外部，如果在循环内部则计算出的数据将是错误的</li>
+</ul>
+</li>
+</ul>
+<h5 id="for循环练习-求偶数和">for循环练习-求偶数和
+</h5><ul>
+<li>需求：求1-100之间的偶数和，并把求和结果在控制台输出 }</li>
+<li>示例代码：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ForTest03</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//求和的最终结果必须保存起来，需要定义一个变量，用于保存求和的结果，初始值为0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//对1-100的数据求和与1-5的数据求和几乎完全一样，仅仅是结束条件不同</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="c1">//对1-100的偶数求和，需要对求和操作添加限制条件，判断是否是偶数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">//sum += i；</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">				</span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="c1">//当循环执行完毕时，将最终数据打印出来</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;1-100之间的偶数和是：&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="for循环练习-统计次数">for循环练习-统计次数
+</h5><p>需求：</p>
+<p>​	  键盘录入两个数字，表示一个范围。</p>
+<p>​           统计这个范围中。</p>
+<p>​           既能被3整除，又能被5整除数字有多少个？</p>
+<p>代码示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"></code></pre></td></tr></table>
+</div>
+</div><h3 id="42-while循环">4.2 while循环
+</h3><h4 id="421-格式">4.2.1 格式：
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">初始化语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">while</span><span class="p">(</span><span class="n">条件判断语句</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">循环体</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">条件控制语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="练习1打印5次helloworld">练习1：打印5次HelloWorld
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">5</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;HelloWorld&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="练习2珠穆朗玛峰">练习2：珠穆朗玛峰
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//1.定义一个变量表示珠穆朗玛峰的高度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">8844430</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//2.定义一个变量表示纸张的厚度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">double</span><span class="w"> </span><span class="n">paper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">.</span><span class="na">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//定义一个计数器（变量），用来统计折叠的次数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//3.循环折叠纸张</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//只有纸张的厚度 &lt; 穆朗玛峰的高度 循环才继续，否则循环就停止</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//坑：只有判断为真，循环才会继续</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">while</span><span class="p">(</span><span class="n">paper</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">height</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//折叠纸张</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">paper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//4.打印一下纸张的厚度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">count</span><span class="p">);</span><span class="c1">//27</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="43-dowhile循环">4.3 do&hellip;while循环
+</h3><p>本知识点了解即可</p>
+<p>格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">初始化语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">do</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">循环体</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">条件控制语句</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">条件判断语句</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>特点：</p>
+<p>​	先执行，再判断。</p>
+<h3 id="44-三种格式的区别">4.4 三种格式的区别：
+</h3><p>​	for和while循环，是先判断，再执行。</p>
+<p>​	do&hellip;while是先执行，再判断。</p>
+<p>​	当知道循环次数或者循环范围的时候，用for循环。</p>
+<p>​	当不知道循环次数，也不知道循环范围，但是知道循环的结束条件时，用while循环。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/axiao/">Axiao</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under AXiao</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/day03-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+        
+        
+            <div class="article-image">
+                <img src="/p/day03-%E8%BF%90%E7%AE%97%E7%AC%A6/Image_1724940523674.154d783b00ac90b426c5bcc038cfa286_hu14621901324948275371.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post day03-运算符"
+                        
+                        data-hash="md5-FU14OwCskLQmxbzAOM&#43;ihg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">day03-运算符</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/day02-java%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">
+        
+        
+            <div class="article-image">
+                <img src="/p/day02-java%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/Image_1724940523674.154d783b00ac90b426c5bcc038cfa286_hu14621901324948275371.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post day02-Java基础概念"
+                        
+                        data-hash="md5-FU14OwCskLQmxbzAOM&#43;ihg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">day02-Java基础概念</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/day01-java%E5%85%A5%E9%97%A8/">
+        
+        
+            <div class="article-image">
+                <img src="/p/day01-java%E5%85%A5%E9%97%A8/Image_1724940523674.154d783b00ac90b426c5bcc038cfa286_hu14621901324948275371.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post day01-Java入门"
+                        
+                        data-hash="md5-FU14OwCskLQmxbzAOM&#43;ihg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">day01-Java入门</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+        
+        
+            <div class="article-image">
+                <img src="/p/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/161229155190231137135-20230610115939.80d48d9bb9a4ce97acafc27317ea7c71_hu16513848478838815713.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Markdown语法学习"
+                        
+                        data-hash="md5-gNSNm7mkzpesr8JzF&#43;p8cQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown语法学习</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="giscus" id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"  
+        data-repo="AXiao-HOLO/AXiao-HOLO.github.io"  
+        data-repo-id="R_kgDOMui1rw"  
+        data-category="Announcements"  
+        data-category-id="DIC_kwDOMui1r84CiXlK"  
+        data-mapping="pathname"  
+        data-strict="0"  
+        data-reactions-enabled="1"  
+        data-emit-metadata="0"  
+        data-input-position="bottom"  
+        data-theme="preferred_color_scheme"  
+        data-lang="zh-CN"  
+        crossorigin="anonymous"  
+        async>  
+    </script>  
+    <script>  
+        function setGiscusTheme(theme) {  
+            let giscus = document.querySelector("iframe.giscus-frame");  
+            if (giscus) {  
+                giscus.contentWindow.postMessage(  
+                    {  
+                        giscus: {  
+                            setConfig: {  
+                                theme: theme,  
+                            },  
+                        },  
+                    },  
+                    "https://giscus.app"  
+                );  
+            }  
+        }  
+    
+        (function () {  
+            addEventListener("message", (e) => {  
+                if (event.origin !== "https://giscus.app") return;  
+                handler();  
+            });  
+            window.addEventListener("onColorSchemeChange", handler);  
+    
+            function handler() {  
+                if (document.documentElement.dataset.scheme === "light") {  
+                    setGiscusTheme('light');  
+                } else {  
+                    setGiscusTheme('dark_dimmed');  
+                }  
+            }  
+        })();  
+    </script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 AXiao_HOLO
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<div id="aplayer"></div>
+
+<script>	
+	const musicDir = "https://AXiao-HOLO.github.io/" + 'music/';
+	const songs = [
+		'After.Howl - Kevin Penkin',
+		'Nora - Kevin Penkin',
+		'Sign - Aimer',
+		'Theme of Holo - Kevin Penkin',
+		'アンダンテ(慢板乐章（TV动画《狼与香辛料 MERCHANT MEETS THE WISE WOLF》片尾曲）) - ClariS',
+		'りんごと君(苹果与你（TV动画《狼与香辛料》片尾曲2）) - 音莉飴',
+		'リンゴ日和～The Wolf Whistling Song - ROCKY CHACK',
+		'リンゴ日和～The Wolf Whistling Song　TVsize - ROCKY CHACK',
+		'旅のゆくえ(旅途终点 (TV动画《狼与香辛料 MERCHANT MEETS THE WISE WOLF》片头曲)) - Hana Hope',
+		'旅の途中(旅途之中) - 清浦夏実'
+	];
+	let audios = [];
+	songs.forEach((item) => {
+		const songInfo = item.split('-');
+		audios.push({
+			name: songInfo[0],
+			artist: songInfo[1],
+			url: musicDir + item + '/song.mp3',
+			cover: musicDir + item + '/cover.jpg',
+			lrc: musicDir + item + '/lyric.lrc'
+		});
+	})
+	const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	fixed: true,
+	autoplay: true,
+	order: 'random',
+	volume: 0.5,
+	lrcType: 3,
+    audio: audios
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+
+
+
+<script src=https://AXiao-HOLO.github.io/js/topbar.min.js></script>
+
+
+<script>
+    var pjax = new Pjax({
+        selectors: [".main-container"]
+    })
+    pjax._handleResponse = pjax.handleResponse;
+    pjax.handleResponse = function (responseText, request, href, options) {
+        if (request.responseText.match("<html")) {
+            
+            let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+            
+            let bodyClass = newDom.body.className;
+            document.body.setAttribute("class", bodyClass)
+            
+            setTimeout(() => {
+                pjax._handleResponse(responseText, request, href, options);
+            }, 500)
+        } else {
+            
+        }
+    }
+
+    
+    topbar.config({
+        barColors: {
+            '0': 'rgba(255, 255, 255, 1)', 
+            '1.0': 'rgba(0, 149, 234,  1)' 
+        }
+    })
+
+    document.addEventListener('pjax:send', () => {
+        topbar.show();
+    })
+
+    
+    
+    function renderMath() {  
+        renderMathInElement(document.body, {  
+            delimiters: [  
+                { left: "$$", right: "$$", display: true },  
+                { left: "$", right: "$", display: false },  
+                { left: "\\(", right: "\\)", display: false },  
+                { left: "\\[", right: "\\]", display: true }  
+            ],  
+            ignoredClasses: ["gist"]  
+        });  
+    }  
+
+    
+    document.addEventListener("DOMContentLoaded", renderMath);  
+
+    document.addEventListener('pjax:complete', () => {
+        window.Stack.init();
+        topbar.hide();
+        
+        const giscusContainer = document.getElementById('giscus-container');  
+        if (giscusContainer) {  
+            giscusContainer.innerHTML = ''; 
+            const giscusScript = document.createElement('script');  
+            giscusScript.src = "https://giscus.app/client.js";  
+            giscusScript.setAttribute('data-repo', 'AXiao-HOLO/AXiao-HOLO.github.io');  
+            giscusScript.setAttribute('data-repo-id', 'R_kgDOMui1rw');  
+            giscusScript.setAttribute('data-category', 'Announcements');  
+            giscusScript.setAttribute('data-category-id', 'DIC_kwDOMui1r84CiXlK');  
+            giscusScript.setAttribute('data-mapping', 'pathname');  
+            giscusScript.setAttribute('data-strict', '0');  
+            giscusScript.setAttribute('data-reactions-enabled', '1');  
+            giscusScript.setAttribute('data-emit-metadata', '0');  
+            giscusScript.setAttribute('data-input-position', 'bottom');  
+            giscusScript.setAttribute('data-theme', 'preferred_color_scheme');  
+            giscusScript.setAttribute('data-lang', 'zh-CN');  
+            giscusScript.setAttribute('crossorigin', 'anonymous');  
+            giscusScript.async = true;  
+            giscusContainer.appendChild(giscusScript); 
+        }
+        
+        renderMath();  
+    });
+</script>
+
+math:<link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script>
+    </body>
+</html>
