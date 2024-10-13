@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>教程 on AXiao_HOLO</title>
+        <link>https://AXiao-HOLO.github.io/tags/%E6%95%99%E7%A8%8B/</link>
+        <description>Recent content in 教程 on AXiao_HOLO</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>AXiao_HOLO</copyright>
+        <lastBuildDate>Sun, 13 Oct 2024 14:38:00 +0800</lastBuildDate><atom:link href="https://AXiao-HOLO.github.io/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>小米电脑管家-非小米电脑安装小米电脑管家的教程</title>
+        <link>https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Sun, 13 Oct 2024 14:38:00 +0800</pubDate>
+        
+        <guid>https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_15-16-43.png" alt="Featured image of post 小米电脑管家-非小米电脑安装小米电脑管家的教程" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;小米电脑管家配合澎湃系统的小米手机可以实现非常多的功能，其中我最喜欢的还属跨设备通话和跨设备剪切板了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-42-30.png&#34;
+	width=&#34;1617&#34;
+	height=&#34;1522&#34;
+	srcset=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-42-30_hu18347289589136137825.png 480w, https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-42-30_hu1576717530133453339.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;254px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;但小米电脑管家在安装时会检测电脑是不是小米旗下的，所以在安装时需要跳过这一验证。&lt;/p&gt;
+&lt;h2 id=&#34;第一步-下载小米电脑管家安装包&#34;&gt;第一步 下载小米电脑管家安装包
+&lt;/h2&gt;&lt;p&gt;在浏览器搜索&lt;strong&gt;小米电脑管家&lt;/strong&gt;；（或者直接点击&lt;a class=&#34;link&#34; href=&#34;https://hyperos.mi.com/continuity&#34;  title=&#34;Xiaomi HyperConnect 跨端智联&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xiaomi HyperConnect 跨端智联&lt;/a&gt;跳转）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-49-39.png&#34;
+	width=&#34;988&#34;
+	height=&#34;325&#34;
+	srcset=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-49-39_hu2466128532566889037.png 480w, https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-49-39_hu4367008382795237497.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;304&#34;
+		data-flex-basis=&#34;729px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入官网，往下拉，找到下载链接&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-51-27.png&#34;
+	width=&#34;1886&#34;
+	height=&#34;1860&#34;
+	srcset=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-51-27_hu4224736880227776055.png 480w, https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-51-27_hu261689123064149986.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;101&#34;
+		data-flex-basis=&#34;243px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第二步-下载跳过验证补丁&#34;&gt;第二步 下载跳过验证补丁
+&lt;/h2&gt;&lt;p&gt;这里我己经准备好了补丁，点击&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1z9dpuEA0ykDwQzUV46sJxw?pwd=5bxk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;百度网盘&lt;/a&gt;下载即可&lt;/p&gt;
+&lt;p&gt;(提取码：5bxk)&lt;/p&gt;
+&lt;p&gt;下载得到&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-55-22.png&#34;
+	width=&#34;662&#34;
+	height=&#34;920&#34;
+	srcset=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-55-22_hu5338668936261044991.png 480w, https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-55-22_hu8079245279883474327.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;71&#34;
+		data-flex-basis=&#34;172px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第三步-安装&#34;&gt;第三步 安装
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;将下载好的安装包和补丁放在同一个文件夹内&lt;/strong&gt;；&lt;/p&gt;
+&lt;p&gt;双击安装包，进行安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-58-18.png&#34;
+	width=&#34;870&#34;
+	height=&#34;540&#34;
+	srcset=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-58-18_hu18060229191102360003.png 480w, https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_14-58-18_hu12360466900580446304.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;386px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接下来就可以正常使用了。&lt;/p&gt;
+&lt;h2 id=&#34;感谢&#34;&gt;感谢
+&lt;/h2&gt;&lt;p&gt;感谢酷安大佬发现的解决方法和补丁&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_15-15-08.png&#34;
+	width=&#34;986&#34;
+	height=&#34;1447&#34;
+	srcset=&#34;https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_15-15-08_hu13443883295673030894.png 480w, https://AXiao-HOLO.github.io/p/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6-%E9%9D%9E%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%84%91%E7%AE%A1%E5%AE%B6%E7%9A%84%E6%95%99%E7%A8%8B/Snipaste_2024-10-13_15-15-08_hu6319201150867950488.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;68&#34;
+		data-flex-basis=&#34;163px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
