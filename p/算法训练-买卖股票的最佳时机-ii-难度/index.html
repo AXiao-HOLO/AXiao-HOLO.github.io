@@ -2,16 +2,16 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="算法练习题">
-<title>算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰</title>
+<title>算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰</title>
 
-<link rel='canonical' href='https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/'>
+<link rel='canonical' href='https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/'>
 
-<link rel="stylesheet" href="/scss/style.min.7eed3e2b9e0a4228a45f397b776f21042bf02474754605adc5512ce7bad438af.css"><meta property='og:title' content="算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰">
+<link rel="stylesheet" href="/scss/style.min.7eed3e2b9e0a4228a45f397b776f21042bf02474754605adc5512ce7bad438af.css"><meta property='og:title' content="算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰">
 <meta property='og:description' content="算法练习题">
-<meta property='og:url' content='https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/'>
+<meta property='og:url' content='https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/'>
 <meta property='og:site_name' content='AXiao_HOLO'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='java' /><meta property='article:tag' content='axiao' /><meta property='article:tag' content='算法' /><meta property='article:tag' content='数组' /><meta property='article:published_time' content='2024-11-14T07:00:00&#43;08:00'/><meta property='article:modified_time' content='2024-11-14T07:00:00&#43;08:00'/><meta property='og:image' content='https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg' />
-<meta name="twitter:title" content="算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='java' /><meta property='article:tag' content='axiao' /><meta property='article:tag' content='算法' /><meta property='article:tag' content='数组' /><meta property='article:published_time' content='2024-11-15T07:00:00&#43;08:00'/><meta property='article:modified_time' content='2024-11-15T07:00:00&#43;08:00'/><meta property='og:image' content='https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg' />
+<meta name="twitter:title" content="算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰">
 <meta name="twitter:description" content="算法练习题"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg' />
 <link rel="shortcut icon" href="/favicon.ico"  />
@@ -268,7 +268,7 @@
         <li><a href="#思路">思路</a></li>
         <li><a href="#代码实现">代码实现</a>
           <ol>
-            <li><a href="#c">c</a></li>
+            <li><a href="#c">C</a></li>
             <li><a href="#java">Java</a></li>
           </ol>
         </li>
@@ -288,9 +288,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/">
+            <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/">
                 
-                    <img src="/post/GSVfYy-WwAA-p5z.jpg" loading="lazy" alt="Featured image of post 算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰" />
+                    <img src="/post/GSVfYy-WwAA-p5z.jpg" loading="lazy" alt="Featured image of post 算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰" />
                 
             </a>
         </div>
@@ -317,7 +317,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/">算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰</a>
+            <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/">算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰</a>
         </h2>
     
         
@@ -343,7 +343,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 14, 2024</time>
+                <time class="article-time--published">Nov 15, 2024</time>
             </div>
         
 
@@ -374,16 +374,89 @@
     
     
     <h2 id="题目要求">题目要求
-</h2><p>给你一个 <strong>非严格递增排列</strong> 的数组 <code>nums</code> ，请你<a class="link" href="http://baike.baidu.com/item/%e5%8e%9f%e5%9c%b0%e7%ae%97%e6%b3%95"  target="_blank" rel="noopener"
-    > 原地</a> 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。然后返回 <code>nums</code> 中唯一元素的个数。</p>
-<p>考虑 <code>nums</code> 的唯一元素的数量为 <code>k</code> ，你需要做以下事情确保你的题解可以被通过：</p>
-<ul>
-<li>更改数组 <code>nums</code> ，使 <code>nums</code> 的前 <code>k</code> 个元素包含唯一元素，并按照它们最初在 <code>nums</code> 中出现的顺序排列。<code>nums</code> 的其余元素与 <code>nums</code> 的大小不重要。</li>
-<li>返回 <code>k</code> 。</li>
-</ul>
-<p><strong>判题标准:</strong></p>
-<p>系统会用下面的代码来测试你的题解:</p>
+</h2><p>给你一个整数数组 <code>prices</code> ，其中 <code>prices[i]</code> 表示某支股票第 <code>i</code> 天的价格。</p>
+<p>在每一天，你可以决定是否购买和/或出售股票。你在任何时候 <strong>最多</strong> 只能持有 <strong>一股</strong> 股票。你也可以先购买，然后在 <strong>同一天</strong> 出售。</p>
+<p>返回 <em>你能获得的 <strong>最大</strong> 利润</em> 。</p>
+<p><strong>示例 1：</strong></p>
 <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：prices = [7,1,5,3,6,4]
+</span></span><span class="line"><span class="cl">输出：7
+</span></span><span class="line"><span class="cl">解释：在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4。
+</span></span><span class="line"><span class="cl">随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6 - 3 = 3。
+</span></span><span class="line"><span class="cl">最大总利润为 4 + 3 = 7 。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>示例 2：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：prices = [1,2,3,4,5]
+</span></span><span class="line"><span class="cl">输出：4
+</span></span><span class="line"><span class="cl">解释：在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5 - 1 = 4。
+</span></span><span class="line"><span class="cl">最大总利润为 4 。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>示例 3：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：prices = [7,6,4,3,1]
+</span></span><span class="line"><span class="cl">输出：0
+</span></span><span class="line"><span class="cl">解释：在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= prices.length &lt;= 3 * 104</code></li>
+<li><code>0 &lt;= prices[i] &lt;= 104</code></li>
+</ul>
+<hr>
+<h2 id="解题过程">解题过程
+</h2><h3 id="思路">思路
+</h3><p>题目要求得出最大利润，其实十分简单，只要能获利就卖出股票然后再购回，依次往下重复进行。</p>
+<h3 id="代码实现">代码实现
+</h3><h4 id="c">C
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">maxProfit</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">prices</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pricesSize</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">pricesSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">prices</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sum</span> <span class="o">+=</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="java">Java
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -396,142 +469,13 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int[] nums = [...]; // 输入数组
-</span></span><span class="line"><span class="cl">int[] expectedNums = [...]; // 长度正确的期望答案
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">int k = removeDuplicates(nums); // 调用
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">assert k == expectedNums.length;
-</span></span><span class="line"><span class="cl">for (int i = 0; i &lt; k; i++) {
-</span></span><span class="line"><span class="cl">    assert nums[i] == expectedNums[i];
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果所有断言都通过，那么您的题解将被 <strong>通过</strong>。</p>
-<p><strong>示例 1：</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：nums = [1,1,2]
-</span></span><span class="line"><span class="cl">输出：2, nums = [1,2,_]
-</span></span><span class="line"><span class="cl">解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>示例 2：</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：nums = [0,0,1,1,1,2,2,3,3,4]
-</span></span><span class="line"><span class="cl">输出：5, nums = [0,1,2,3,4]
-</span></span><span class="line"><span class="cl">解释：函数应该返回新的长度 5 ， 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4 。不需要考虑数组中超出新长度后面的元素。
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>提示：</strong></p>
-<ul>
-<li>
-<p><code>1 &lt;= nums.length &lt;= 3 * 104</code></p>
-</li>
-<li>
-<p><code>-104 &lt;= nums[i] &lt;= 104</code></p>
-</li>
-<li>
-<p><code>nums</code> 已按 <strong>非严格递增</strong> 排列</p>
-<hr>
-</li>
-</ul>
-<h2 id="解题过程">解题过程
-</h2><h3 id="思路">思路
-</h3><p>题目中已经给出原数组，数组<code>nums</code>是<strong>非严格递增序列</strong>的（如示例），题目要求<em>删除重复的元素</em>，并且覆盖原数组，然后返回覆盖后数组的元素个数。</p>
-<p>由于结果是<em>覆盖原数组</em>，并且数组元素存在规律，所以在运算过程中，应以数组<strong>下标</strong>的运算进行修改。</p>
-<p>那么考虑如何修改<strong>下标</strong>。</p>
-<p>我们可以先定义两个下标<code>fast</code>，<code>slow</code>，初值均为1（因为数组下标为0的元素不需要改变）。</p>
-<p>然后<code>fast</code>负责遍历原数组，<code>slow</code>负责修改原数组。（两个过程同时进行）</p>
-<p>当<code>fast</code>对应的值与<code>fast-1</code>对应的值不同时，令<code>slow</code>对应的值修改为<code>fast</code>的值，然后<code>slow</code>自增。</p>
-<p>当<code>fast</code>等于数组长度时，循环结束。</p>
-<p>此时，<code>slow</code>的大小即为所求数组长度。（因为在每次修改之后slow已经+1，而此时slow对应的数组元素为待修改，所以数组长度不是slow+1）</p>
-<h3 id="代码实现">代码实现
-</h3><h4 id="c">c
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">removeDuplicates</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">)</span> <span class="p">{</span><span class="cm">/*在编写代码的页面已直接给出numsSize变量*/</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">numsSize</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fast</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">slow</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">fast</span><span class="o">&lt;</span><span class="n">numsSize</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">fast</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">nums</span><span class="p">[</span><span class="n">fast</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">nums</span><span class="p">[</span><span class="n">slow</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">fast</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">            <span class="n">slow</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fast</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">slow</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="java">Java
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">removeDuplicates</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">fast</span><span class="o">=</span><span class="n">1</span><span class="p">,</span><span class="n">slow</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">fast</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">fast</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">fast</span><span class="o">]</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">nums</span><span class="o">[</span><span class="n">slow</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">fast</span><span class="o">]</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">slow</span><span class="o">++</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">fast</span><span class="o">++</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">slow</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">maxProfit</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">prices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">prices</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">prices</span><span class="o">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
@@ -608,7 +552,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/">
+    <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/">
         
         
             <div class="article-image">
@@ -619,7 +563,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰</h2>
+            <h2 class="article-title">算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰</h2>
         </div>
     </a>
 </article>
