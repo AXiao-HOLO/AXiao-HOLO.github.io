@@ -8,12 +8,12 @@
         <language>zh-cn</language>
         <copyright>AXiao_HOLO</copyright>
         <lastBuildDate>Wed, 20 Nov 2024 07:00:00 +0800</lastBuildDate><atom:link href="https://AXiao-HOLO.github.io/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>算法训练——移动零    难度——★✰✰✰✰</title>
-        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E7%A7%BB%E5%8A%A8%E9%9B%B6-%E9%9A%BE%E5%BA%A6/</link>
+        <title>算法训练——移动零</title>
+        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E7%A7%BB%E5%8A%A8%E9%9B%B6/</link>
         <pubDate>Wed, 20 Nov 2024 07:00:00 +0800</pubDate>
         
-        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E7%A7%BB%E5%8A%A8%E9%9B%B6-%E9%9A%BE%E5%BA%A6/</guid>
-        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练——移动零    难度——★✰✰✰✰" /&gt;&lt;h2 id=&#34;题目描述&#34;&gt;题目描述
+        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E7%A7%BB%E5%8A%A8%E9%9B%B6/</guid>
+        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练——移动零" /&gt;&lt;h2 id=&#34;题目描述&#34;&gt;题目描述
 &lt;/h2&gt;&lt;p&gt;给定一个数组 &lt;code&gt;nums&lt;/code&gt;，编写一个函数将所有 &lt;code&gt;0&lt;/code&gt; 移动到数组的末尾，同时保持非零元素的相对顺序。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;请注意&lt;/strong&gt; ，必须在不复制数组的情况下原地对数组进行操作。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
@@ -84,12 +84,12 @@
 &lt;/h4&gt;</description>
         </item>
         <item>
-        <title>算法训练——存在重复元素    难度——★✰✰✰✰</title>
-        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0-%E9%9A%BE%E5%BA%A6/</link>
+        <title>算法训练——存在重复元素</title>
+        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/</link>
         <pubDate>Sun, 17 Nov 2024 07:00:00 +0800</pubDate>
         
-        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0-%E9%9A%BE%E5%BA%A6/</guid>
-        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练——存在重复元素    难度——★✰✰✰✰" /&gt;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求
+        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/</guid>
+        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练——存在重复元素" /&gt;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求
 &lt;/h2&gt;&lt;p&gt;给你一个整数数组 &lt;code&gt;nums&lt;/code&gt; 。如果任一值在数组中出现 &lt;strong&gt;至少两次&lt;/strong&gt; ，返回 &lt;code&gt;true&lt;/code&gt; ；如果数组中每个元素互不相同，返回 &lt;code&gt;false&lt;/code&gt; 。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;输入：&lt;/strong&gt;&lt;/p&gt;
@@ -189,12 +189,12 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>算法训练——旋转数组    难度——★★✰✰✰</title>
-        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84-%E9%9A%BE%E5%BA%A6/</link>
+        <title>算法训练——旋转数组</title>
+        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84/</link>
         <pubDate>Sat, 16 Nov 2024 07:00:00 +0800</pubDate>
         
-        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84-%E9%9A%BE%E5%BA%A6/</guid>
-        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练——旋转数组    难度——★★✰✰✰" /&gt;&lt;h2 id=&#34;题目描述&#34;&gt;题目描述
+        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84/</guid>
+        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练——旋转数组" /&gt;&lt;h2 id=&#34;题目描述&#34;&gt;题目描述
 &lt;/h2&gt;&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt;，将数组中的元素向右轮转 &lt;code&gt;k&lt;/code&gt; 个位置，其中 &lt;code&gt;k&lt;/code&gt; 是非负数。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -441,12 +441,12 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰</title>
-        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/</link>
+        <title>算法训练—— 买卖股票的最佳时机 II</title>
+        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii/</link>
         <pubDate>Fri, 15 Nov 2024 07:00:00 +0800</pubDate>
         
-        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii-%E9%9A%BE%E5%BA%A6/</guid>
-        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练—— 买卖股票的最佳时机 II    难度——★✰✰✰✰" /&gt;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求
+        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-ii/</guid>
+        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练—— 买卖股票的最佳时机 II" /&gt;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求
 &lt;/h2&gt;&lt;p&gt;给你一个整数数组 &lt;code&gt;prices&lt;/code&gt; ，其中 &lt;code&gt;prices[i]&lt;/code&gt; 表示某支股票第 &lt;code&gt;i&lt;/code&gt; 天的价格。&lt;/p&gt;
 &lt;p&gt;在每一天，你可以决定是否购买和/或出售股票。你在任何时候 &lt;strong&gt;最多&lt;/strong&gt; 只能持有 &lt;strong&gt;一股&lt;/strong&gt; 股票。你也可以先购买，然后在 &lt;strong&gt;同一天&lt;/strong&gt; 出售。&lt;/p&gt;
 &lt;p&gt;返回 &lt;em&gt;你能获得的 &lt;strong&gt;最大&lt;/strong&gt; 利润&lt;/em&gt; 。&lt;/p&gt;
@@ -556,12 +556,12 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰</title>
-        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/</link>
+        <title>算法训练—— 删除有序数组中的重复项</title>
+        <link>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</link>
         <pubDate>Thu, 14 Nov 2024 07:00:00 +0800</pubDate>
         
-        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9-%E9%9A%BE%E5%BA%A6/</guid>
-        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练—— 删除有序数组中的重复项    难度——★✰✰✰✰" /&gt;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求
+        <guid>https://AXiao-HOLO.github.io/p/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</guid>
+        <description>&lt;img src="https://AXiao-HOLO.github.io/post/GSVfYy-WwAA-p5z.jpg" alt="Featured image of post 算法训练—— 删除有序数组中的重复项" /&gt;&lt;h2 id=&#34;题目要求&#34;&gt;题目要求
 &lt;/h2&gt;&lt;p&gt;给你一个 &lt;strong&gt;非严格递增排列&lt;/strong&gt; 的数组 &lt;code&gt;nums&lt;/code&gt; ，请你&lt;a class=&#34;link&#34; href=&#34;http://baike.baidu.com/item/%e5%8e%9f%e5%9c%b0%e7%ae%97%e6%b3%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt; 原地&lt;/a&gt; 删除重复出现的元素，使每个元素 &lt;strong&gt;只出现一次&lt;/strong&gt; ，返回删除后数组的新长度。元素的 &lt;strong&gt;相对顺序&lt;/strong&gt; 应该保持 &lt;strong&gt;一致&lt;/strong&gt; 。然后返回 &lt;code&gt;nums&lt;/code&gt; 中唯一元素的个数。&lt;/p&gt;
 &lt;p&gt;考虑 &lt;code&gt;nums&lt;/code&gt; 的唯一元素的数量为 &lt;code&gt;k&lt;/code&gt; ，你需要做以下事情确保你的题解可以被通过：&lt;/p&gt;
