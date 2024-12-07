@@ -526,16 +526,16 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int SearchSeqList(SeqList *L, int x)
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">    int j = 1;
-</span></span><span class="line"><span class="cl">    while (j &lt;= L-&gt;length &amp;&amp; L-&gt;elem[j] != x)
-</span></span><span class="line"><span class="cl">        j++;
-</span></span><span class="line"><span class="cl">    if (j &gt; L-&gt;length)
-</span></span><span class="line"><span class="cl">        return -1;
-</span></span><span class="line"><span class="cl">    else
-</span></span><span class="line"><span class="cl">        return j;
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">SearchSeqList</span><span class="p">(</span><span class="n">SeqList</span> <span class="o">*</span><span class="n">L</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="n">L</span><span class="o">-&gt;</span><span class="n">length</span> <span class="o">&amp;&amp;</span> <span class="n">L</span><span class="o">-&gt;</span><span class="n">elem</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="n">L</span><span class="o">-&gt;</span><span class="n">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="遍历">遍历
