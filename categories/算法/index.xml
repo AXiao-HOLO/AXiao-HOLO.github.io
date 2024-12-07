@@ -269,11 +269,11 @@
 &lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-231 &amp;lt;= nums[i] &amp;lt;= 231 - 1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;**进阶：**你能尽量减少完成的操作次数吗？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进阶：&lt;/strong&gt; 你能尽量减少完成的操作次数吗？&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;解题过程&#34;&gt;解题过程
 &lt;/h2&gt;&lt;h3 id=&#34;思路&#34;&gt;思路
-&lt;/h3&gt;&lt;p&gt;这道题目与&lt;a class=&#34;link&#34; href=&#34;https://axiao-holo.github.io/p/%e7%ae%97%e6%b3%95%e8%ae%ad%e7%bb%83-%e5%88%a0%e9%99%a4%e6%9c%89%e5%ba%8f%e6%95%b0%e7%bb%84%e4%b8%ad%e7%9a%84%e9%87%8d%e5%a4%8d%e9%a1%b9-%e9%9a%be%e5%ba%a6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;这道题目与&lt;a class=&#34;link&#34; href=&#34;https://axiao-holo.github.io/p/%e7%ae%97%e6%b3%95%e8%ae%ad%e7%bb%83-%e5%88%a0%e9%99%a4%e6%9c%89%e5%ba%8f%e6%95%b0%e7%bb%84%e4%b8%ad%e7%9a%84%e9%87%8d%e5%a4%8d%e9%a1%b9/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;删除有序数组中的重复项&lt;/a&gt;的思路类似。&lt;/p&gt;
 &lt;p&gt;定义两个数组下标&lt;code&gt;fast&lt;/code&gt;,&lt;code&gt;slow&lt;/code&gt;,&lt;/p&gt;
 &lt;p&gt;用&lt;code&gt;fast&lt;/code&gt;来遍历数组，当&lt;code&gt;fast&lt;/code&gt;不为0时，替换两个下标对应的值，然后&lt;code&gt;slow&lt;/code&gt;自增。&lt;/p&gt;
@@ -307,7 +307,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;java与上面类似&#34;&gt;Java(与上面类似)
-&lt;/h4&gt;</description>
+&lt;/h4&gt;&lt;p&gt;不再赘述。&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>算法训练——存在重复元素</title>
