@@ -4254,6 +4254,48 @@ math:<link
     ]
   });
 </script>
+<!DOCTYPE html>
+<html lang="en" data-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day18-API（常见API，对象克隆）</title>
+    
+
+    <script>
+        
+        function applyPreferredColorScheme() {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                document.documentElement.setAttribute('data-scheme', storedTheme);
+                return;
+            }
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-scheme', prefersDark ? 'dark' : 'light');
+        }
+
+        
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-scheme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-scheme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', applyPreferredColorScheme);
+
+        
+        document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+    </script>
+</head>
+<body>
+    
+    <button id="theme-toggle">切换主题</button> 
+</body>
+</html>
+
 <script src=https://AXiao-HOLO.github.io/background/sakura.js></script>
 
 
