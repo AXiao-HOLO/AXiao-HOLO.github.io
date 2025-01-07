@@ -81,14 +81,14 @@ function getRandom(option) {
 			break;
 		case 'fnx':
 			// random = -2.2 + Math.random() * 0.5;
-			random = -2.2 + Math.random() * 0.25;
+			random = -1.1 + Math.random() * 0.125;
 			ret = function (x, y) {
 				return x + random;
 			};
 			break;
 		case 'fny':
 			// random = 1.5 + Math.random() * 0.7;
-			random = 1.5 + Math.random() * 0.35;
+			random = 0.75 + Math.random() * 0.165;
 			ret = function (x, y) {
 				return y + random;
 			};
